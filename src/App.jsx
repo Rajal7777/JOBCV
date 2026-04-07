@@ -1,9 +1,12 @@
-
+import Navbar from "./components/Navbar";
+import ThemeProvider from "./context/ThemeContext";
+import "./i18n"; // Import i18n
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>React App</h1>
-    </div>
+    <ThemeProvider>
+      <Navbar />
+      
+    </ThemeProvider>
   );
 }
