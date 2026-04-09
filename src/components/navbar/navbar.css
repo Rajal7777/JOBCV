@@ -1,0 +1,155 @@
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  backdrop-filter: blur(10px);
+}
+
+/* CONTAINER */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo-text1 {
+  color: var(--text);
+}
+
+.logo-text2 {
+  color: var(--primary);
+}
+
+/* MENU BUTTON */
+.logo-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* DESKTOP MENU */
+.nav-menu-desktop {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* BUTTONS */
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-toggle-btn {
+  background: none;
+  border: 1px solid var(--text);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* MOBILE MENU */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  /* position: fixed; */
+  right: -100%;
+  top: 0; 
+  width: 30%;
+  height: 100%;
+  background: var(--bg);
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* MOBILE HEADER */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+.mobile-nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .logo-menu {
+    display: block;
+  }
+
+  .nav-menu-desktop {
+    display: none;
+  }
+}
