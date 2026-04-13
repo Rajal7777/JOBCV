@@ -16,8 +16,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  //get the current theme from context,{localStorage}
+  //get the current theme
   const { theme, toggleTheme } = useContext(ThemeContext);
+
   //EN : JP language toggle
   const { t, i18n } = useTranslation();
 
@@ -33,12 +34,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  //local body scroll
+  //menu-open -> no scroll
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
+  console.log(theme === "light")
 
   return (
     <>
@@ -49,14 +51,14 @@ export default function Navbar() {
               <MenuIcon />
             </button>
 
-            <span className="logo-text1">{t("My")}</span>
-            <span className="logo-text2">{t("second")}</span>
+            <h2>My</h2>
+            <h2 className="logo-text">{t("portfolio")}</h2>
           </div>
 
           {/* Desktop menu */}
           <ul className="nav-menu-desktop">
             {navItems.map((item) => (
-              <li className="nav-item" key={item.name}>
+              <li className="nav-items" key={item.name}>
                 <a href={item.link} className="nav-link">
                   {t(item.name)}
                 </a>
@@ -67,14 +69,15 @@ export default function Navbar() {
 
         <div className="toggle-buttons">
           <button
+          aria-label="Toggle language" 
             className="nav-toggle-btn toggle-lng"
             onClick={toggleLanguage}
           >
-            {t("language.toggle")}
+            {t("language")}
           </button>
 
           <button className="nav-toggle-btn " onClick={toggleTheme}>
-            {theme === "light" ? <Moon /> : <Sun />}
+            {theme == 'light' ? <Sun /> :  <Moon />}
           </button>
         </div>
       </nav>
@@ -89,7 +92,8 @@ export default function Navbar() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="mobile-menu-header">
-            <div className="mobile-logo">Brand</div>
+            <h2 className="logo-text">{t("second")}</h2>
+
             <button
               className="mobile-close-btn"
               onClick={() => setIsOpen(false)}
@@ -99,13 +103,14 @@ export default function Navbar() {
             </button>
           </div>
 
+          <hr />
           <ul className="mobile-nav-menu">
             {navItems.map((item) => (
               <li className="mobile-nav-item" key={item.name}>
                 <a
                   href={item.link}
                   className="mobile-nav-link"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
                 >
                   {t(item.name)}
                 </a>
