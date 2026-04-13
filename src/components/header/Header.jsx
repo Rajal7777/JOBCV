@@ -2,7 +2,9 @@ import React from "react";
 
 console.log("Header component loaded");
 const Header = () => {
-  return <header>header</header>
+  return (
+    <h1>header</h1>
+  )
 };
 
 export default Header;
