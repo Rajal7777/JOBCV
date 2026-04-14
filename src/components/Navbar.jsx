@@ -1,9 +1,9 @@
 import { Moon, Sun, MenuIcon, PanelLeftClose } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import ThemeContext from "../context/ThemeContextValue";
 import { useTranslation } from "react-i18next";
 
-import "./navbar.css";
+import "../styles/navbar.css";
 
 const navItems = [
   { name: "about", link: "#about" },
@@ -40,7 +40,6 @@ export default function Navbar() {
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
-  console.log(theme === "light")
 
   return (
     <>
@@ -69,7 +68,7 @@ export default function Navbar() {
 
         <div className="toggle-buttons">
           <button
-          aria-label="Toggle language" 
+            aria-label="Toggle language"
             className="nav-toggle-btn toggle-lng"
             onClick={toggleLanguage}
           >
@@ -77,7 +76,7 @@ export default function Navbar() {
           </button>
 
           <button className="nav-toggle-btn " onClick={toggleTheme}>
-            {theme == 'light' ? <Sun /> :  <Moon />}
+            {theme === "light" ? <Moon /> : <Sun />}
           </button>
         </div>
       </nav>
@@ -92,7 +91,7 @@ export default function Navbar() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="mobile-menu-header">
-            <h2 className="logo-text">{t("second")}</h2>
+            <h2 className="logo-text">Profile</h2>
 
             <button
               className="mobile-close-btn"

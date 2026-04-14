@@ -6,7 +6,7 @@ const resources = {
   // Navbar
   en: {
     translation: {
-      language: "日本語",
+      language: "JP",
       about: "About",
       skills: "Skills",
       project: "Project",

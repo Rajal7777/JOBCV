@@ -1,35 +1,27 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import  ThemeContext  from "./ThemeContextValue";
 
-export const ThemeContext = createContext({
-  theme: "light",
-  toggleTheme: () => {},
-});
+
 
 export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
-
-    return savedTheme === "dark" || savedTheme === "light"
-      ? savedTheme
-      : "light";
-  });
-  // const [isMounted, setIsMounted] = useState(false);
-
+  
+    //check for the theme if not found then give the default theme light.
+    return savedTheme === "dark" || savedTheme === "light" ? savedTheme : "light";
+   });
+ 
   useEffect(() => {
-    //save theme to localStorgae in change
     localStorage.setItem("theme", theme);
 
-    if (theme === "dark") {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-    } else {
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-    }
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
   }, [theme]);
 
   function toggleTheme() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    console.log('toggle btn clicked');
+    console.log('theme', theme)
   }
 
   const themeValue = {

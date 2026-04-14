@@ -1,5 +1,5 @@
-import Navbar from "./components/navbar/Navbar";
-import Header from "./components/header/Header";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import ThemeProvider from "./context/ThemeContext";
 import "./i18n"; // Import i18n
 
