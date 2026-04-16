@@ -1,0 +1,67 @@
+.code-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  background: linear-gradient(
+    180deg,
+    #0f172a,
+    #020617
+  ); /* Background same to image */
+  overflow: hidden;
+  left: 35px;
+  bottom: -40px;
+  height: 35px;
+}
+
+/* subtle glow effect behind logos */
+.code-image::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08),
+    transparent 70%
+  );
+  filter: blur(40px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SVG styling */
+.code-image img {
+  width: 65px;
+  height: 65px;
+  filter: brightness(0) invert(1); /* make SVG white */
+  opacity: 0.8;
+  transition: all 0.3s ease;
+
+  /* soft shadow */
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+}
+
+/* hover effect (modern UI feel) */
+/* .code-image img:hover {
+  opacity: 1;
+  transform: translateY(-5px) scale(1.05);
+
+  filter: brightness(0) invert(1) drop-shadow(0 0 16px rgba(255, 255, 255, 0.4));
+} */
+
+body.light .code-image {
+  background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+  background-color: transparent;
+}
+
+body.light .code-image img {
+  filter: none; /* original colors */
+  opacity: 0.9;
+}
+
+body.light .code-image img:hover {
+  filter: none;
+}

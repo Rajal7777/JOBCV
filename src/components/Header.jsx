@@ -24,6 +24,11 @@ export default function Header() {
             I build modern, responsive web applications with React and
             JavaScript,css and clean UI/UX.
           </p>
+          <p>
+            I'm seeking a new role as a frontend developer and would appreciate to your support.
+            <br />
+            <strong>I'd love to connect.</strong>
+          </p>
 
           <div className="profile-btn">
             <Button>
