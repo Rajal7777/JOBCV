@@ -7,6 +7,7 @@ export default function Projects(){
     {projects.map((project) => (
         <li>
             <h2>{project.name}</h2>
+            <p></p>
         </li>
     ))}
    </ul>
