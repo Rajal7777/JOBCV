@@ -11,7 +11,8 @@ import '../styles/codeBar.css'
 
 export default function CodeBar(){
     return(
-        <div className="code-image">
+    <div className="code-div">
+             <div className="code-image">
            <img src={html} alt="html-Logo" width="100" height="100" className='light-svg' />
            <img src={css} alt="html-Logo" width="100" height="100" className='light-svg' />
            <img src={javascript} alt="html-Logo" width="100" height="100" className='light-svg' />
@@ -21,5 +22,6 @@ export default function CodeBar(){
            <img src={git} alt="html-Logo" width="100" height="100" className='light-svg' />
            <img src={vsCode} alt="html-Logo" width="100" height="100" className='light-svg' />
         </div>
+    </div>
     )
 }

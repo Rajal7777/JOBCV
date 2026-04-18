@@ -32,7 +32,7 @@ body.light {
   --accent: #173164;
   --accent-hover: #326ce0;
   --mobile-bg: #1a1a2e;
-  --border: #e5e7eb;
+  --mobile-text: #e5e7eb;
   --shadow: rgba(0, 0, 0, 0.08);
 }
 
@@ -45,7 +45,7 @@ body.dark {
   --accent: #0e4158;
   --accent-hover: #3551cf;
   --mobile-bg: #ffffff;
-  --border: #1f2937;
+  --mobile-text: #1f2937;
   --shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -57,7 +57,6 @@ body {
   transition:
     background 0.5s ease,
     color 0.3s ease;
-    position: relative;
 }
 
 body::before {

@@ -1,0 +1,98 @@
+#examples {
+  padding: 1rem 0.5rem;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+#examples h2 {
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+  font-size: 1.6rem;
+  background: linear-gradient(#16213e, #983e9b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#examples menu {
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#examples menu button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 300;
+  font-size: 1.5rem;
+  border-radius: 6px 6px 0 0;
+  background-color: transparent;
+  font-family: emoji;
+}
+
+#examples menu button.active {
+  background-color: var(--accent);
+  color: white;
+}
+
+.example-content {
+  padding: 0.5rem;
+  border-radius: 0 8px 8px 8px;
+  background-color: var(--accent);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.example-content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.example-content p {
+  color: var(--text-secondary);
+  font-family: emoji;
+  font-size: 1.2rem;
+}
+
+.example-content pre {
+  font-size: 1rem;
+}
+
+/* dark mode */
+body.dark #examples h2 {
+  background: linear-gradient(#1c26abf1, rgba(16, 123, 194, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 668px) {
+  #examples {
+    padding: 5px;
+    margin: 0;
+  }
+
+  #examples menu button {
+    padding: 5px;
+    font-size: 1.1rem;
+  }
+
+  .example-content p {
+    font-size: 0.85rem;
+  }
+
+  .example-content pre {
+    font-size: 0.65rem;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 368px) {
+  #examples menu button {
+    padding: 0 10px 0 0;
+    border-left: 1px solid var(--accent);
+    border-radius: 0;
+    font-size: 0.8rem;
+  }
+}

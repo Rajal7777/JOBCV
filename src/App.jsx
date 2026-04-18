@@ -3,13 +3,16 @@ import Header from "./components/Header";
 import CodeBar from "./components/CodeBar";
 import ThemeProvider from "./context/ThemeContext";
 import "./i18n"; // Import i18n
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
 
 export default function App() {
   return (
     <ThemeProvider>
       <Navbar />
       <Header />
-      <CodeBar />
+      <AboutMe />
+      <Projects />
     </ThemeProvider>
   );
 }

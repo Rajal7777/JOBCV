@@ -49,8 +49,6 @@ export default function Navbar() {
             <button className="logo-menu" onClick={toggleMenu}>
               <MenuIcon />
             </button>
-
-            <h2>My</h2>
             <h2 className="logo-text">{t("portfolio")}</h2>
           </div>
 
@@ -91,7 +89,7 @@ export default function Navbar() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="mobile-menu-header">
-            <h2 className="logo-text">Profile</h2>
+            <h2 className="mobile-logo-text">Profile</h2>
 
             <button
               className="mobile-close-btn"

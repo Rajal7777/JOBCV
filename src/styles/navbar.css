@@ -1,9 +1,6 @@
 /* NAVBAR */
 .navbar {
-  background-color: rgba(var(--bg-primary-rgb), 0.9);
   box-shadow: 0 2px 4px var(--shadow);
-  /* backdrop-filter: blur(10px); */
-  display: flex;
   padding: 12px 20px;
   z-index: 1000;
   transition: all 0.3s ease;
@@ -31,15 +28,14 @@
   cursor: pointer;
 }
 
-.nav-logo h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--accent);
-  font-family: "Playfair Display", serif;
-}
-
 .logo-text {
+    font-family: "Quicksand", sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(#22d34e, #1b1bd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   white-space: nowrap;
 }
 
@@ -65,6 +61,7 @@
 }
 
 .nav-link {
+  font-family: 'Figtree', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--text-primary);
@@ -89,21 +86,20 @@
 /* BUTTONS */
 .toggle-buttons {
   display: flex;
+  gap: 5px;
 }
 
 .nav-toggle-btn {
-  border: 1px solid var(--border);
-  font-size: 1.3rem;
+  border: none;
+  font-size: 0.9rem;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 4px 15px;
   background-color: #3f3d3d;
   color: white;
   transition: background-color 0.3s ease;
-  margin-left: 6px;
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .nav-toggle-btn:hover {
@@ -114,9 +110,7 @@
 /* LANGUAGE TOGGLE */
 .toggle-lng {
   width: auto;
-  /* prevents text from breaking */
-  white-space: nowrap;
-  min-width: 60px;
+  white-space: nowrap; /* prevents text from breaking */
   writing-mode: horizontal-tb;
 }
 
@@ -136,12 +130,7 @@
 }
 
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40%;
-  min-width: 13rem;
-  height: 80%;
+  height: 60%;
   background-color: var(--mobile-bg);
   box-shadow: 2px 0 5px var(--shadow);
   transition: 0.3s;
@@ -169,7 +158,6 @@
   height: 35px;
   border-radius: 50%;
   padding: 5px;
-  /* color: var(--border); */
   filter: drop-shadow(0px 0px 5px black);
 }
 
@@ -190,10 +178,14 @@
   margin-bottom: 10px;
 }
 
+.mobile-logo-text {
+  font-size: 1.3rem;
+  color: var(--mobile-text);
+}
 .mobile-nav-link {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--accent);
+  font-size: 1rem;
+  color: var(--mobile-text);
 }
 
 .mobile-nav-link:hover {
@@ -202,11 +194,48 @@
 
 /* RESPONSIVE MEDIA QUERY*/
 @media (max-width: 768px) {
+  .navbar {
+    padding: 8px;
+  }
+
   .logo-menu {
     display: block;
   }
 
   .nav-menu-desktop {
     display: none;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .nav-toggle-btn {
+    font-size: 0.6rem;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .toggle-lng {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 278px) {
+  .logo-text {
+    display: none;
+  }
+
+  .nav-toggle-btn {
+    font-size: 0.6rem;
+    padding: 5px;
+    height: 20px;
+    width: 26px;
+    border: none;
+    justify-content: center;
+  }
+
+  .toggle-lng {
+    padding: 5px 10px;
   }
 }
