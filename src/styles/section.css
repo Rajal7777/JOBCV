@@ -1,0 +1,13 @@
+section {
+ margin: 0 1rem;
+ padding-top: 15px;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+  font-size: 1.6rem;
+  background: linear-gradient(#16213e, #983e9b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

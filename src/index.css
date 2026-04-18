@@ -21,11 +21,12 @@ html {
   --mobile-bg: #1a1a2e;
   --border: #e9ecef;
   --shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* LIGHT MODE */
 body.light {
-  --bg-primary: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  --bg-primary: linear-gradient(135deg, #e5e9ee, #e5e7eb);
   --bg-secondary: #020617;
   --text-primary: #111827;
   --text-secondary: #87a6e2;

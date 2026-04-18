@@ -1,4 +1,4 @@
-import Example from "./Example";
+import Skill from "./Skill";
 import Section from "./Section";
 
 import "../styles/aboutMe.css";
@@ -59,11 +59,11 @@ export default function AboutMe() {
           )}
         </div>
       </Section>
-      
-        <button onClick={handleReadMore} className="read-more">
-          {readMore ? "Close ..." : "Read more..."}
-        </button>
-      <Example />
+
+      <button onClick={handleReadMore} className="read-more">
+        {readMore ? "Close ..." : "Read more..."}
+      </button>
+      <Skill />
     </>
   );
 }

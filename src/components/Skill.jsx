@@ -3,9 +3,9 @@ import { topics } from "../data/data";
 
 import Section from "./Section";
 import Button from "../UI/Button";
-import '../styles/example.css'
+import "../styles/skill.css";
 
-export default function Example() {
+export default function Skill() {
   const [showExample, setShowExample] = useState();
 
   console.log("state", showExample);

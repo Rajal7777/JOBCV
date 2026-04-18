@@ -14,13 +14,13 @@ export default function CodeBar(){
     <div className="code-div">
              <div className="code-image">
            <img src={html} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={css} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={javascript} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={typescript} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={react} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={node} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={git} alt="html-Logo" width="100" height="100" className='light-svg' />
-           <img src={vsCode} alt="html-Logo" width="100" height="100" className='light-svg' />
+           <img src={css} alt="css-Logo" width="100" height="100" className='light-svg' />
+           <img src={javascript} alt="javascript-Logo" width="100" height="100" className='light-svg' />
+           <img src={typescript} alt="typescript-Logo" width="100" height="100" className='light-svg' />
+           <img src={react} alt="react-Logo" width="100" height="100" className='light-svg' />
+           <img src={node} alt="node-Logo" width="100" height="100" className='light-svg' />
+           <img src={git} alt="git-Logo" width="100" height="100" className='light-svg' />
+           <img src={vsCode} alt="vscode-Logo" width="100" height="100" className='light-svg' />
         </div>
     </div>
     )

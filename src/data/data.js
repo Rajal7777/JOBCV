@@ -1,4 +1,4 @@
-import { Languages } from "lucide-react";
+import image from '../images/javascript.jpg';
 
 export const topics = {
   html: {
@@ -84,7 +84,7 @@ export const projects = [
     name: "Todo List",
     Description:
       "App where user can add, update , view the todo and let`s user delelte the task on complete",
-    image: "/Images/normal.png",
+    image: image,
     Languages: ["Html", "CSS", "Javascript", "typescript", "React"],
     URL: "#",
     githubUrl: "#github",
@@ -94,7 +94,27 @@ export const projects = [
     name: "Image slider",
     Description:
       "Made a image slider in react with full functionality for learning and get more concept",
-    image: "/Images/normal.png",
+   image: image,
+    tags: ["React", "CSS"],
+    URL: "#",
+    githubUrl: "#github",
+  },
+  {
+    id: 3,
+    name: "Image slider",
+    Description:
+      "Made a image slider in react with full functionality for learning and get more concept",
+    image: image,
+    tags: ["React", "CSS"],
+    URL: "#",
+    githubUrl: "#github",
+  },
+  {
+    id: 4,
+    name: "Image slider",
+    Description:
+      "Made a image slider in react with full functionality for learning and get more concept",
+    image: image,
     tags: ["React", "CSS"],
     URL: "#",
     githubUrl: "#github",

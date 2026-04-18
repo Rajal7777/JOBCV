@@ -1,17 +1,8 @@
-#examples {
+/* #examples {
   padding: 1rem 0.5rem;
   max-width: 110rem;
   margin: 0 auto;
-}
-
-#examples h2 {
-  font-family: "Quicksand", sans-serif;
-  text-align: left;
-  font-size: 1.6rem;
-  background: linear-gradient(#16213e, #983e9b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+} */
 
 #examples menu {
   margin: 1rem 0 0 0;

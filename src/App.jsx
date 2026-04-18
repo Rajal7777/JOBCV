@@ -4,7 +4,7 @@ import CodeBar from "./components/CodeBar";
 import ThemeProvider from "./context/ThemeContext";
 import "./i18n"; // Import i18n
 import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
+import Project from "./components/Project";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
       <Navbar />
       <Header />
       <AboutMe />
-      <Projects />
+      <Project />
     </ThemeProvider>
   );
 }

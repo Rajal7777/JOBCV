@@ -1,3 +1,4 @@
+import '../styles/section.css';
 
 export default function Section({title,children, ...props}){
 

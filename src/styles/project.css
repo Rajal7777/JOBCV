@@ -1,0 +1,93 @@
+.div-projects {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 0.2rem;
+}
+
+.div-projects li {
+  list-style: none;
+}
+
+.project-container {
+  max-width: 18rem;
+  box-shadow: var(--card-shadow);
+  opacity: 0.8;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.project-container:hover {
+  opacity: 1;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Dark mode */
+body.dark .project-container {
+  box-shadow: 0 4px 10px rgba(241, 237, 237, 0.05);
+}
+
+.project-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-container h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.project-container p {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.project-link {
+  display: flex;
+  gap: 20px;
+}
+
+.project-container a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: none;
+  display: flex;
+  gap: 5px;
+  color: var(--accent);
+}
+
+.project-container a:hover {
+  color: var(--accent-hover);
+}
+
+.light-svg {
+  color: var(--accent);
+  filter: brightness(0) drop-shadow(0) invert(0);
+  /* brightness(0) ->makes svg completely black
+  invert(0) → no inversion (so still black) 
+  drop-shadow(0) → does nothing*/
+}
+
+.light-svg:hover {
+  filter: brightness(1) invert(1) drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+}
+
+/* dark & light mode */
+
+/* Light mode */
+.light .light-svg {
+  filter: brightness(0);
+}
+
+/* Dark mode */
+.dark .light-svg {
+  filter: brightness(1) invert(1);
+}
